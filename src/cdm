@@ -81,6 +81,7 @@ locktty=${locktty:-no}
 consolekit=${consolekit:-yes}
 cktimeout=${cktimeout:-30}
 altstartx=${altstartx:-no}
+synchronous=${synchronous:-no}
 startxlog="${startxlog:-/dev/null}"
 [[ -z "${binlist[*]}" ]] && binlist=()
 [[ -z "${namelist[*]}" ]] && namelist=()
@@ -205,6 +206,7 @@ case ${flaglist[$binindex]} in
 
         $(yesno consolekit) && launchflags=(-c -t "$cktimeout")
         $(yesno altstartx) && launchflags=("${launchflags[@]}" --altstartx)
+        $(yesno synchronous) && launchflags=("${launchflags[@]}" --synchronous)
         launchflags=("${launchflags[@]}" --startxlog "$startxlog")
         if cdm-xlaunch "${launchflags[@]}" -- "${bin[@]}" -- "${serverargs[@]}"
         then

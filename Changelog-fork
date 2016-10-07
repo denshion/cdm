@@ -1,0 +1,2 @@
+Added "synchronous" option that makes cdm wait for startx to complete
+so that it can be used as a login shell.

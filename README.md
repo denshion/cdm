@@ -1,5 +1,11 @@
+A fork of
+
+
 CDM: The Console Display Manager
 ================================
+
+that has a "synchronous" option that makes cdm wait for startx to complete
+so that it can be used as a login shell.
 
 
 Invocation
