@@ -43,6 +43,9 @@ display=0
 # special value `keep' causes to run X in current tty.
 xtty=7
 
+# Should cdm wait fot startx to complete?
+synchronous=no
+
 # Should cdm(1) stick to the specified display?
 locktty=no
 
